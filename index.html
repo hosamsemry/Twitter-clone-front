@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𝕏. It’s what’s happening / 𝕏</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="overflow-x:hidden;">
+
+<div class="auth-fullscreen">
+  <div class="auth-split-wrapper">
+    <!-- Left Hero Logo -->
+    <div class="auth-hero-left">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="icon icon-x"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"></path></g></svg>
+    </div>
+
+    <!-- Right Auth Form Card -->
+    <div class="auth-form-right">
+      <h1 class="auth-title-large">Happening now</h1>
+      <h2 class="auth-subtitle" id="formHeaderTitle">Sign in to 𝕏</h2>
+
+      <div class="auth-error-banner" id="errorNote"></div>
+
+      <!-- Sign In Form -->
+      <form id="loginForm" class="auth-form-card">
+        <div class="auth-input-group">
+          <label class="auth-label" for="loginEmailOrUsername">Phone, email, or username</label>
+          <input type="text" id="loginEmailOrUsername" class="auth-input" required autocomplete="username" autofocus>
+        </div>
+        <div class="auth-input-group">
+          <label class="auth-label" for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" class="auth-input" required autocomplete="current-password">
+        </div>
+        <button class="btn-auth-primary" type="submit">Sign in</button>
+      </form>
+
+      <!-- Create Account Form -->
+      <form id="registerForm" class="auth-form-card" style="display:none;">
+        <div class="auth-input-group">
+          <label class="auth-label" for="regUsername">Username</label>
+          <input type="text" id="regUsername" class="auth-input" required placeholder="Choose a username">
+        </div>
+        <div class="auth-input-group">
+          <label class="auth-label" for="regEmail">Email address</label>
+          <input type="email" id="regEmail" class="auth-input" required placeholder="name@example.com">
+        </div>
+        <div class="auth-input-group">
+          <label class="auth-label" for="regPassword">Password</label>
+          <input type="password" id="regPassword" class="auth-input" required autocomplete="new-password">
+        </div>
+        <button class="btn-auth-primary" type="submit">Create account</button>
+      </form>
+
+      <!-- Switch between Login and Register -->
+      <div class="auth-toggle-note">
+        <span id="switchToRegisterWrap">
+          Don’t have an account? <a href="#" id="switchToRegister">Sign up</a>
+        </span>
+        <span id="switchToLoginWrap" style="display:none;">
+          Already have an account? <a href="#" id="switchToLogin">Sign in</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
